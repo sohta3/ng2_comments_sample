@@ -16,7 +16,7 @@ import {CommentService} from './comment_service';
 	`,
 	directives: [CommentList, CommentForm],
 	providers: [CommentService]
-});
+})
 export class CommentBox implements OnInit {
 	comments = [];
 
