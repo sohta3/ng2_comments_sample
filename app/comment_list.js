@@ -22,11 +22,14 @@ System.register(['angular2/core', './comment_item'], function(exports_1) {
             CommentList = (function () {
                 function CommentList() {
                 }
+                __decorate([
+                    core_1.Input(), 
+                    __metadata('design:type', Array)
+                ], CommentList.prototype, "comments", void 0);
                 CommentList = __decorate([
                     core_1.Component({
                         selector: 'comment-list',
                         template: "\n\t\t<div class=\"commentList ui divided items\">\n\t\t  <comment-item *ngFor=\"#comment of comments\" [comment]=\"comment\"></comment-item>\n\t\t</div>\n\t",
-                        inputs: ['comments'],
                         directives: [comment_item_1.CommentItem]
                     }), 
                     __metadata('design:paramtypes', [])

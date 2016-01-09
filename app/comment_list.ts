@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 import {CommentItem} from './comment_item';
 import {Comment} from './comment';
 
@@ -9,10 +9,9 @@ import {Comment} from './comment';
 		  <comment-item *ngFor="#comment of comments" [comment]="comment"></comment-item>
 		</div>
 	`,
-	inputs: ['comments'],
 	directives: [CommentItem]
 })
 export class CommentList {
-	comments: Comment[];
+	@Input() comments: Comment[];
 }
 

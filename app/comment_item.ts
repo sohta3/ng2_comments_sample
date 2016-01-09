@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
 import {Comment} from './comment';
 
 @Component({
@@ -11,7 +11,6 @@ import {Comment} from './comment';
       </div>
     </div>
     `,
-    inputs: ['comment'],
     styles: [`
 	.commentItem {
 	  margin-bottom: 20px;
@@ -19,6 +18,6 @@ import {Comment} from './comment';
   `],
 })
 export class CommentItem {
-  public comment: Comment;
-  public children: string;
+	@Input() comment:Comment;
+	public children: string;
 }
